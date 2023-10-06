@@ -1,10 +1,10 @@
 #include <stdio.h>
-
+#include<stdlib.h>
 /**
  *  * main - Prints the alphabet in lowercase, and then in uppercase.
  *   *
  *    * Return: Always 0.
- *     */
+ */
 int main(void)
 {
 		char letter;
@@ -16,6 +16,6 @@ int main(void)
 			putchar(letter);
 
 		putchar('\n');
-		return (0):
+		return (0);
 }
 						
