@@ -2,8 +2,7 @@
 /**
  *  * main - Entry point for the program.
    *
-    * This function prints the character '_' and 'putchar' followed by a newline
-   * character. It serves as the main entry point for the program.
+    * This function prints the character '_' and 'putcha
      *
        * Return: Always returns 0 to indicate successful execution.
   */
