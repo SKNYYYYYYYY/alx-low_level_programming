@@ -1,5 +1,18 @@
-#include<stdio.h>
-int main()
+#include<main.h>
+/**
+ * main-entry
+ * return 0
+*/
+int main(void)
 {
-    printf("0-putchar");
+    -putchar('_');
+    -putchar('p');
+    -putchar('u');
+    -putchar('t');
+    -putchar('c');
+    -putchar('h');
+    -putchar('a');
+    -putchar('r');
+    -putchar('\n');
+    return(0);
 }
