@@ -1,7 +1,7 @@
 #include"main.h"
 /**
- *  *  main-entry PLACE FOR THE PROGRAM
- *   *  return 0 when there is erro and 1 when success
+ *  main- print _putchar
+ *   return 0 when there is erro and 1 when success
  */
 int main(void)
 {
