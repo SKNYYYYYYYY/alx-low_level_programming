@@ -1,1 +1,1 @@
-Progamming in C
+Learning C is fun
