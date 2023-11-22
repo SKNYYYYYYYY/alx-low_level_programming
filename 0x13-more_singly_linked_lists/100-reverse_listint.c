@@ -12,7 +12,7 @@ listint_t *prev = NULL;
 listint_t *next = NULL;
 
 while (*head != NULL)
-i{
+{
 next = (*head)->next;
 (*head)->next = prev;
 prev = *head;
