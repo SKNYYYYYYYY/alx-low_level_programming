@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("erro!! Need 3 arguments\n");
+		printf("error!! Need 3 arguments\n");
 		return (1);
 	}
 	a = atoi(argv[1]);
