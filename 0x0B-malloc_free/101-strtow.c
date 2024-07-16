@@ -1,56 +1,52 @@
 #include <stdlib.h>
-#include <stdio.h>
+#include <ctype.h>
 
 /**
  * strtow - Splits a string into words.
  * @str: The input string.
- *
  * Return: Pointer to an array of strings (words), or NULL if failure.
  */
 char **strtow(char *str)
 {
-	int i, j, k, len, word_count;
 	char **words;
+	int i, j, k, len, word_count;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	len = 0;
-	while (str[len] != '\0')
-		len++;
+	for (len = 0; str[len]; len++)
+		;
 
 	words = malloc((len + 1) * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 
-	word_count = 0;
-	for (i = 0; i < len; i++)
+	for (i = 0, word_count = 0; str[i]; i++)
 	{
-		if (str[i] != ' ')
+		while (isspace((unsigned char)str[i]))
+			i++;
+		if (str[i] == '\0')
+			break;
+
+		for (j = i; !isspace((unsigned char)str[j]) && str[j]; j++)
+			;
+
+		words[word_count] = malloc((j - i + 1) * sizeof(char));
+		if (words[word_count] == NULL)
 		{
-			/* Beginning of a word */
-			j = i;
-			while (str[i] != ' ' && str[i] != '\0')
-				i++;
-			/* Allocate memory for this word */
-			words[word_count] = malloc((i - j + 1) * sizeof(char));
-			if (words[word_count] == NULL)
-			{
-				/* Free previously allocated memory */
-				for (k = 0; k < word_count; k++)
-					free(words[k]);
-				free(words);
-				return (NULL);
-			}
-			/* Copy the word into words[word_count] */
-			for (k = 0; j < i; j++, k++)
-				words[word_count][k] = str[j];
-			words[word_count][k] = '\0';
-			word_count++;
+			for (k = 0; k < word_count; k++)
+				free(words[k]);
+			free(words);
+			return (NULL);
 		}
+
+		for (k = 0; i < j; i++, k++)
+			words[word_count][k] = str[i];
+		words[word_count][k] = '\0';
+		word_count++;
+		i--;
 	}
-	/* Terminate the array with NULL */
+
 	words[word_count] = NULL;
 	return (words);
 }
-
