@@ -1,9 +1,19 @@
 #include <stdlib.h>
 
+/**
+ * str_concat - Concatenates two strings.
+ * @s1: First string.
+ * @s2: Second string.
+ *
+ * Return: Pointer to the newly allocated space in memory containing
+ * the concatenated string. If either string is NULL, it is treated
+ * as an empty string. If memory allocation fails, returns NULL.
+ */
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
 	int i, c, len, len2, x, p;
+
 	x = 0;
 	p = 0;
 
