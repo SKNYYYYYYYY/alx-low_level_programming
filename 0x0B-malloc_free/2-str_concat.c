@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	while (s2[p] != '\0')
 	{
-		len++;
+		len2++;
 		p++;
 	}
 	ptr = (char *)malloc(sizeof(char) * (len + len2) + 1);
