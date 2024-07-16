@@ -8,13 +8,22 @@
  *
  * Return: a pointer s to thecreated array
  */
-char (*create_array(unsigned int size, char c)){
-	char *ptArray;
-	unsigned int  count;
-ptArray= malloc(size*sizeof(char));
-for(count=0;count<size;count++){
-	ptArray[count]=c;
+#include <stdlib.h>
+char *create_array(unsigned int size, char c)
+{
+	unsigned int i;
+	char *arr;
 
-	}
-	return (ptArray);
+	if (size == 0)
+		return ("NULL");
+
+	arr = (char *)malloc(sizeof(char) * size);
+
+	if (arr == NULL)
+		return ("NULL");
+
+	for (i = 0; i < size; i++)
+		arr[i] = c;
+
+	return (arr);
 }
