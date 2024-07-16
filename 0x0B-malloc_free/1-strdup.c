@@ -7,29 +7,19 @@
  * @str: char
 		
  * Return: 0
-		
  */
-char *_strdup(char *str){
-	char *ptstr;
-		
-	int strLen = 0;		
-	if (*ptstr==NULL)
-		return (NULL);
+#include <stdlib.h>
 
-	while (str[strLen] != '\0')
+char *_strdup(char *str)
+{
+	char *ptr;
 
-		strLen++;
+	ptr = (char *)malloc(sizeof(str));
+	if (ptr == NULL) {
+		return NULL;
+	}
 
-	ptstr = malloc(strLen*sizeof(char)  + 1);
-
-	if (ptstr == NULL)
-
-		return (NULL);
-
-	for(int count = 0; str[count] != '\0'; count++)
-
-	ptstr[count] = str[count];
-		
-	return (ptstr);
-		
+	ptr = str;
+	return ptr;
 }
+	
