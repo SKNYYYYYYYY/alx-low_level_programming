@@ -1,4 +1,4 @@
-#include<stdlib.h>
+#include <stdlib.h>
 
 /**
  * array_range - Creates an array of integers from min to max
@@ -9,19 +9,20 @@
  */
 int *array_range(int min, int max)
 {
-	int *ptr_arr, *ptr,i,r;
+	int *ptr_arr, *ptr, i, r;
+
 	r = 0;
-	if(min > max)
+	if (min > max)
 	{
 		return (NULL);
 	}
-	ptr=malloc(sizeof(int)*(max-min)+ 1);
-	if(ptr==NULL)
+	ptr = malloc(sizeof(int) * (max - min + 1));
+	if (ptr == NULL)
 		return (NULL);
 	ptr_arr = ptr;
-	for(i=0;i<=(max-min);i++)
+	for (i = 0; i <= (max - min); i++)
 	{
-		ptr_arr[i] = ptr[i]+r++;
+		ptr_arr[i] = ptr[i] + r++;
 	}
-return (ptr_arr);
+	return (ptr_arr);
 }
