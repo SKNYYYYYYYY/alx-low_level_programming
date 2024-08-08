@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_binary - function to convert decimal to binary
  * @n: decimal number
