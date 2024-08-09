@@ -7,19 +7,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-<<<<<<< HEAD
-unsigned int i = 0, k = 0;
-if(b == NULL)
-    return (0);
-for(i = 0; b[i] != '\0'; i++)
-{
-    if(b[i] != '0' && b[i] != '1')
-        return (0);
-    k = (k << 1) | (b[i] - '0');
-}
-=======
 	unsigned int decimal = 0;
->>>>>>> 205ed1ea9636b3885bf67eb2d48b58ab3c90f1d5
 
 	if (b == NULL)
 		return (0);
