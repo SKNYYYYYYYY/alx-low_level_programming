@@ -18,7 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 	if (number_of_chars <= (ssize_t)letters)
 	{
-		_putchar(character);
+		
+		fputc(character, stdout);
 		number_of_chars++;
 
 	}
