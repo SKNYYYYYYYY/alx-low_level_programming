@@ -6,7 +6,7 @@
  * create_file - Creates a file and writes the given content to it.
  * @filename: Name of the file to create.
  * @text_content: Content to write to the file.
- * 
+* 
  * Return: 1 on success, -1 on failure.
  */
 int create_file(const char *filename, char *text_content)
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		while (text_content[len] != '\0')
 			len++;
-		
+
 		written = write(fd, text_content, len);
 		if (written == -1)
 		{

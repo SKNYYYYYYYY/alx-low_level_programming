@@ -25,5 +25,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		number_of_chars++;
 	}
 	fclose(fp);
+	    printf("\nDebug: Number of characters read and printed: %ld\n", number_of_chars);
 	return (number_of_chars);
 }
