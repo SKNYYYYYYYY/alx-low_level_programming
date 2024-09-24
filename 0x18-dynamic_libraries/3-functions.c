@@ -23,8 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 
 }
 /**
- * _strncpy - copies up to n characters from the source
- *  string to the destination string
+ * _strncpy - copies up to n characters from the source string to the destination string
  * @dest: the destination buffer
  * @src: the source string
  * @n: the number of characters to copy
