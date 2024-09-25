@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * _puts - prints a string to standard output
  * @s: the string to be printed
@@ -7,5 +6,4 @@
  */
 void _puts(char *s)
 {
-
 }
