@@ -32,7 +32,7 @@ typedef struct hash_table_s
 
 
 /*Function prototypes */
-hash_table_t *hash_table_create(unsigned int size);
+hash_table_t *hash_table_create(unsigned long int size);
 
 
 #endif
