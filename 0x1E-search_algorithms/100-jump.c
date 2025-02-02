@@ -17,16 +17,16 @@ int jump_search(int *array, size_t size, int value)
 		if (value == array[current])
 			return (current);
 
-		printf("Value checked array[%d] = [%d]\n", current, array[current]);
+		printf("Value checked array[%ld] = [%d]\n", current, array[current]);
 		if (value <= (array[current + jumper]))
 		{
 			new = current + jumper;
-			printf("Value found between indexes [%d] and [%d]\n", current, new);
+			printf("Value found between indexes [%ld] and [%ld]\n", current, new);
 
 			for (i = current; i <= (current + jumper); i++)
 			{
 				if (i < size)
-					printf("Value checked array[%d] = [%d]\n", i, array[i]);
+					printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 				else
 					return (-1);
 				if (value == array[i])
